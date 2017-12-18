@@ -1,0 +1,16 @@
+<div>
+	<h4>Sign in with</h4>
+	<button class="btn btn-primary" (click)="signInWithGoogle()">Google</button>
+	<button class="btn btn-primary" (click)="signInWithFB()">Facebook</button>
+</div>
+<div *ngIf="user">
+	<h4>Logged in as</h4>
+	<img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+	<div>
+		<h4 class="card-title">{{ user.name }}</h4>
+		<p class="card-text">{{ user.email }}</p>
+	</div>
+	<div>
+		<button class="btn btn-danger" (click)="signOut()">Sign out</button>
+	</div>
+</div>

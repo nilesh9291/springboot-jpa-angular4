@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let cust of customers" [class.selected]="cust === selectedCustomer" (click)="onSelect(cust)">
+		<a><h4>{{cust.id}} . {{cust.firstName}} {{cust.lastName}}</h4> </a>
+	</li>
+</ul>
+<customer-detail [customer]="selectedCustomer"></customer-detail>
